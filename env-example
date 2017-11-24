@@ -56,7 +56,7 @@ CHANGE_SOURCE=false
 
 ### WORKSPACE ##########################################################################################################
 
-WORKSPACE_INSTALL_XDEBUG=false
+WORKSPACE_INSTALL_XDEBUG=true
 WORKSPACE_INSTALL_LDAP=false
 WORKSPACE_INSTALL_SOAP=false
 WORKSPACE_INSTALL_IMAP=false
@@ -69,8 +69,8 @@ WORKSPACE_INSTALL_DRUSH=false
 WORKSPACE_INSTALL_DRUPAL_CONSOLE=false
 WORKSPACE_INSTALL_AEROSPIKE=false
 WORKSPACE_INSTALL_V8JS=false
-WORKSPACE_COMPOSER_GLOBAL_INSTALL=false
-WORKSPACE_INSTALL_WORKSPACE_SSH=false
+WORKSPACE_COMPOSER_GLOBAL_INSTALL=true
+WORKSPACE_INSTALL_WORKSPACE_SSH=true
 WORKSPACE_INSTALL_LARAVEL_ENVOY=false
 WORKSPACE_INSTALL_LARAVEL_INSTALLER=false
 WORKSPACE_INSTALL_DEPLOYER=false
@@ -79,7 +79,7 @@ WORKSPACE_INSTALL_MC=false
 WORKSPACE_INSTALL_SYMFONY=false
 WORKSPACE_INSTALL_PYTHON=false
 WORKSPACE_INSTALL_IMAGE_OPTIMIZERS=false
-WORKSPACE_INSTALL_IMAGEMAGICK=false
+WORKSPACE_INSTALL_IMAGEMAGICK=true
 WORKSPACE_INSTALL_TERRAFORM=false
 WORKSPACE_INSTALL_DUSK_DEPS=false
 WORKSPACE_INSTALL_PG_CLIENT=false
@@ -93,26 +93,26 @@ WORKSPACE_SSH_PORT=2222
 
 ### PHP_FPM ############################################################################################################
 
-PHP_FPM_INSTALL_XDEBUG=false
+PHP_FPM_INSTALL_XDEBUG=true
 PHP_FPM_INSTALL_MONGO=false
 PHP_FPM_INSTALL_MSSQL=false
 PHP_FPM_INSTALL_SOAP=false
-PHP_FPM_INSTALL_ZIP_ARCHIVE=false
+PHP_FPM_INSTALL_ZIP_ARCHIVE=true
 PHP_FPM_INSTALL_BCMATH=false
 PHP_FPM_INSTALL_PHPREDIS=false
 PHP_FPM_INSTALL_MEMCACHED=false
 PHP_FPM_INSTALL_OPCACHE=false
 PHP_FPM_INSTALL_EXIF=false
 PHP_FPM_INSTALL_AEROSPIKE=false
-PHP_FPM_INSTALL_MYSQLI=false
+PHP_FPM_INSTALL_MYSQLI=true
 PHP_FPM_INSTALL_PGSQL=false
 PHP_FPM_INSTALL_TOKENIZER=false
-PHP_FPM_INSTALL_INTL=false
-PHP_FPM_INSTALL_GHOSTSCRIPT=false
+PHP_FPM_INSTALL_INTL=true
+PHP_FPM_INSTALL_GHOSTSCRIPT=true
 PHP_FPM_INSTALL_LDAP=false
 PHP_FPM_INSTALL_SWOOLE=false
 PHP_FPM_INSTALL_IMAGE_OPTIMIZERS=false
-PHP_FPM_INSTALL_IMAGEMAGICK=false
+PHP_FPM_INSTALL_IMAGEMAGICK=true
 PHP_FPM_INSTALL_PG_CLIENT=false
 
 ### PHP_WORKER #########################################################################################################
@@ -140,10 +140,10 @@ APACHE_PHP_UPSTREAM_TIMEOUT=60
 
 ### MYSQL ##############################################################################################################
 
-MYSQL_VERSION=8.0
-MYSQL_DATABASE=default
-MYSQL_USER=default
-MYSQL_PASSWORD=secret
+MYSQL_VERSION=5.7
+MYSQL_DATABASE=t3dawin
+MYSQL_USER=t3dawin
+MYSQL_PASSWORD=t3dawin
 MYSQL_PORT=3306
 MYSQL_ROOT_PASSWORD=root
 MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d
@@ -323,6 +323,24 @@ LARAVEL_ECHO_SERVER_PORT=6001
 # windows: 'unison'
 # linux: docker-sync not required
 
-DOCKER_SYNC_STRATEGY=native_osx
+#DOCKER_SYNC_STRATEGY=unison
 
 ########################################################################################################################
+
+############################
+# Miscellaneous
+############################
+
+# Replace with your Docker Host IP (will be appended to /etc/hosts)
+
+DOCKER_HOST_IP=127.0.0.1
+
+
+# The Remote Interpreter entry matching name `laradock`
+
+PHP_IDE_CONFIG=serverName=laradock-inside-intranet
+
+
+# Fix for windows users to make sure the application path works.
+
+COMPOSE_CONVERT_WINDOWS_PATHS=1
