@@ -7,6 +7,11 @@
 
 APPLICATION=../
 
+### Application variables ##############################################################################################
+# enables development context
+
+TYPO3_CONTEXT=Development
+
 ### PHP Version ########################################################################################################
 # Select a PHP version of the Workspace and PHP-FPM containers (Does not apply to HHVM). Accepted values: 71 - 70 - 56
 
