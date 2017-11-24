@@ -16,7 +16,7 @@ rebuild:
 	$(COMPOSE) up -d --build mysql nginx
 
 start:
-    $(COMPOSE) start
+	$(COMPOSE) start
 
 stop:
-    $(COMPOSE) stop
+	$(COMPOSE) stop
