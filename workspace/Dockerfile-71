@@ -681,6 +681,11 @@ RUN if [ ${INSTALL_DUSK_DEPS} = true ]; then \
 #--------------------------------------------------------------------------
 #
 
+# Install mysql-client
+RUN apt-get update -yqq && \
+    apt-get -y install mysql-client
+
+
 # Clean up
 USER root
 RUN apt-get clean && \
