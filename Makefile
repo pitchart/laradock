@@ -2,6 +2,7 @@ COMPOSE=docker-compose
 install:
 	cp env-example .env
 	$(COMPOSE) up -d --build mysql nginx
+	$(COMPOSE) exec --user=laradock workspace make install
 
 bash:
 	$(COMPOSE) exec --user=laradock workspace bash
