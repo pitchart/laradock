@@ -4,6 +4,11 @@ install:
 	$(COMPOSE) up -d --build mysql nginx
 	$(COMPOSE) exec --user=laradock workspace make install
 
+install-dev:
+	cp env-example .env
+	$(COMPOSE) up -d --build mysql nginx
+	$(COMPOSE) exec --user=laradock workspace make install-dev
+
 bash:
 	$(COMPOSE) exec --user=laradock workspace bash
 
