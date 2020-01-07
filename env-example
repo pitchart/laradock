@@ -14,7 +14,7 @@ APP_CODE_PATH_CONTAINER=/var/www
 APP_CODE_CONTAINER_FLAG=:cached
 
 # Choose storage path on your machine. For all storage systems
-DATA_PATH_HOST=~/.laradock/data
+DATA_SAVE_PATH=~/.laradock/t3dawin
 
 ### Drivers ################################################
 
@@ -224,10 +224,10 @@ APACHE_DOCUMENT_ROOT=/var/www/
 ### MYSQL #################################################
 
 MYSQL_VERSION=latest
-MYSQL_DATABASE=default
-MYSQL_USER=default
-MYSQL_PASSWORD=secret
 MYSQL_PORT=3306
+MYSQL_DATABASE=t3dawin
+MYSQL_USER=t3dawin
+MYSQL_PASSWORD=t3dawin
 MYSQL_ROOT_PASSWORD=root
 MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d
 
