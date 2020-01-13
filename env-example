@@ -15,6 +15,7 @@ APP_CODE_CONTAINER_FLAG=:cached
 
 # Choose storage path on your machine. For all storage systems
 DATA_SAVE_PATH=~/.laradock/t3dawin
+DATA_PATH_HOST=~/.laradock/t3dawin
 
 ### Drivers ################################################
 
@@ -39,7 +40,7 @@ COMPOSE_PROJECT_NAME=laradock
 
 # Select a PHP version of the Workspace and PHP-FPM containers (Does not apply to HHVM).
 # Accepted values: 7.4 - 7.3 - 7.2 - 7.1 - 7.0 - 5.6
-PHP_VERSION=7.3
+PHP_VERSION=7.2
 
 ### Phalcon Version ###########################################
 
@@ -267,7 +268,7 @@ APACHE_DOCUMENT_ROOT=/var/www/
 
 ### MYSQL #################################################
 
-MYSQL_VERSION=latest
+MYSQL_VERSION=5.7
 MYSQL_PORT=3306
 MYSQL_DATABASE=t3dawin
 MYSQL_USER=t3dawin
